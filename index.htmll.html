@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)file:///C:/index.html/index.html#home -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giftify - Customized Gifts Store</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="./Giftify - Customized Gifts Store_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="./Giftify - Customized Gifts Store_files/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #8e44ad;
+            --secondary: #ff6b81;
+            --dark: #252525;
+            --light: #fff7fb;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #8e44ad, #ff6b81);
+        }
+
+        .navbar-brand {
+            font-size: 27px;
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .hero {
+            min-height: 520px;
+            background:
+                linear-gradient(rgba(80, 20, 80, .72), rgba(255, 80, 120, .55)),
+                url("https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=1600&q=80")
+                center/cover;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .btn-main {
+            background: white;
+            color: #8e44ad;
+            border: none;
+            padding: 13px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .btn-main:hover {
+            background: #8e44ad;
+            color: white;
+        }
+
+        .section-title {
+            font-weight: 800;
+            margin-bottom: 35px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px 15px;
+            text-align: center;
+            transition: .3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(142,68,173,.2);
+        }
+
+        .category-icon {
+            font-size: 45px;
+            color: var(--primary);
+        }
+
+        .product-card {
+            border: none;
+            border-radius: 18px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+            transition: .3s;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(0,0,0,.15);
+        }
+
+        .product-card img {
+            height: 230px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .price {
+            color: var(--primary);
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .custom-box {
+            background: linear-gradient(135deg, #8e44ad, #ff6b81);
+            color: white;
+            border-radius: 25px;
+            padding: 50px;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -8px;
+            background: #ffcc00;
+            color: black;
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #21152a;
+            color: white;
+        }
+
+        .footer-link {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            color: #ff6b81;
+        }
+
+        .jazzcash {
+            border: 2px solid #00a651;
+            background: #f4fff8;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .jazz-logo {
+            color: #00a651;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .modal-content {
+            border-radius: 20px;
+            border: none;
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .custom-preview {
+            background: #f4f4f4;
+            min-height: 180px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width: 768px) {
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .custom-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body style="">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="file:///C:/index.html/index.html#">
+            🎁 Giftify
+        </a>
+
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/index.html/index.html#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/index.html/index.html#categories">Categories</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/index.html/index.html#products">Products</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/index.html/index.html#customize">Customize</a>
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <button class="btn btn-light position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas">
+                        <i class="bi bi-cart3"></i> Cart
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="col-lg-7">
+
+            <h1>Make Every Gift Special</h1>
+
+            <p>
+                Customize beautiful gifts with names, photos and special messages.
+                Perfect gifts for birthdays, weddings, anniversaries and every special moment.
+            </p>
+
+            <a href="file:///C:/index.html/index.html#products" class="btn btn-main mt-3">
+                Shop Now <i class="bi bi-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+<section class="py-5" id="categories">
+
+    <div class="container">
+
+        <h2 class="text-center section-title">
+            Shop By Category
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-6 col-md-3">
+                <div class="category-card" onclick="filterProducts('Mugs')">
+                    <div class="category-icon">☕</div>
+                    <h5>Customized Mugs</h5>
+                    <p class="text-muted">Personalized mugs</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="category-card" onclick="filterProducts('Pens')">
+                    <div class="category-icon">🖊️</div>
+                    <h5>Name Pens</h5>
+                    <p class="text-muted">Engraved pens</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="category-card" onclick="filterProducts('Frames')">
+                    <div class="category-icon">🖼️</div>
+                    <h5>Photo Frames</h5>
+                    <p class="text-muted">Beautiful memories</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="category-card" onclick="filterProducts('Keychains')">
+                    <div class="category-icon">🔑</div>
+                    <h5>Keychains</h5>
+                    <p class="text-muted">Personalized keychains</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="category-card" onclick="filterProducts('T-Shirts')">
+                    <div class="category-icon">👕</div>
+                    <h5>T-Shirts</h5>
+                    <p class="text-muted">Custom designs</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="category-card" onclick="filterProducts('Bags')">
+                    <div class="category-icon">👜</div>
+                    <h5>Custom Bags</h5>
+                    <p class="text-muted">Stylish bags</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="category-card" onclick="filterProducts('Boxes')">
+                    <div class="category-icon">🎁</div>
+                    <h5>Gift Boxes</h5>
+                    <p class="text-muted">Premium gift boxes</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="category-card" onclick="filterProducts('Caps')">
+                    <div class="category-icon">🧢</div>
+                    <h5>Custom Caps</h5>
+                    <p class="text-muted">Personalized caps</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section class="py-5" id="products">
+
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <h2 class="section-title mb-0">
+                Popular Gifts
+            </h2>
+
+            <select class="form-select w-auto" id="categoryFilter" onchange="filterProducts(this.value)">
+
+                <option value="All">All Products</option>
+                <option value="Mugs">Mugs</option>
+                <option value="Pens">Pens</option>
+                <option value="Frames">Frames</option>
+                <option value="Keychains">Keychains</option>
+                <option value="T-Shirts">T-Shirts</option>
+                <option value="Bags">Bags</option>
+                <option value="Boxes">Boxes</option>
+                <option value="Caps">Caps</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="row g-4" id="productContainer">
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <img src="./Giftify - Customized Gifts Store_files/photo-1577937927133-66ef06acdf18" alt="Customized Photo Mug">
+
+                        <div class="p-3">
+
+                            <small class="text-muted">
+                                Mugs
+                            </small>
+
+                            <h5 class="mt-2">
+                                Customized Photo Mug
+                            </h5>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="price">
+                                    Rs. 799
+                                </span>
+
+                                <button class="btn btn-sm btn-primary" onclick="addToCart(1)">
+
+                                    <i class="bi bi-cart-plus"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <img src="./Giftify - Customized Gifts Store_files/photo-1583485088034-697b5bc54ccd" alt="Personalized Name Pen">
+
+                        <div class="p-3">
+
+                            <small class="text-muted">
+                                Pens
+                            </small>
+
+                            <h5 class="mt-2">
+                                Personalized Name Pen
+                            </h5>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="price">
+                                    Rs. 599
+                                </span>
+
+                                <button class="btn btn-sm btn-primary" onclick="addToCart(2)">
+
+                                    <i class="bi bi-cart-plus"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <img src="./Giftify - Customized Gifts Store_files/photo-1513475382585-d06e58bcb0e0" alt="Customized Photo Frame">
+
+                        <div class="p-3">
+
+                            <small class="text-muted">
+                                Frames
+                            </small>
+
+                            <h5 class="mt-2">
+                                Customized Photo Frame
+                            </h5>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="price">
+                                    Rs. 999
+                                </span>
+
+                                <button class="btn btn-sm btn-primary" onclick="addToCart(3)">
+
+                                    <i class="bi bi-cart-plus"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <img src="./Giftify - Customized Gifts Store_files/photo-1627123424574-724758594e93" alt="Personalized Keychain">
+
+                        <div class="p-3">
+
+                            <small class="text-muted">
+                                Keychains
+                            </small>
+
+                            <h5 class="mt-2">
+                                Personalized Keychain
+                            </h5>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="price">
+                                    Rs. 499
+                                </span>
+
+                                <button class="btn btn-sm btn-primary" onclick="addToCart(4)">
+
+                                    <i class="bi bi-cart-plus"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <img src="./Giftify - Customized Gifts Store_files/photo-1521572163474-6864f9cf17ab" alt="Customized T-Shirt">
+
+                        <div class="p-3">
+
+                            <small class="text-muted">
+                                T-Shirts
+                            </small>
+
+                            <h5 class="mt-2">
+                                Customized T-Shirt
+                            </h5>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="price">
+                                    Rs. 1,499
+                                </span>
+
+                                <button class="btn btn-sm btn-primary" onclick="addToCart(5)">
+
+                                    <i class="bi bi-cart-plus"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <img src="./Giftify - Customized Gifts Store_files/photo-1594223274512-ad4803739b7c" alt="Customized Gift Bag">
+
+                        <div class="p-3">
+
+                            <small class="text-muted">
+                                Bags
+                            </small>
+
+                            <h5 class="mt-2">
+                                Customized Gift Bag
+                            </h5>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="price">
+                                    Rs. 899
+                                </span>
+
+                                <button class="btn btn-sm btn-primary" onclick="addToCart(6)">
+
+                                    <i class="bi bi-cart-plus"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <img src="./Giftify - Customized Gifts Store_files/photo-1513201099705-a9746e1e201f" alt="Premium Gift Box">
+
+                        <div class="p-3">
+
+                            <small class="text-muted">
+                                Boxes
+                            </small>
+
+                            <h5 class="mt-2">
+                                Premium Gift Box
+                            </h5>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="price">
+                                    Rs. 1,999
+                                </span>
+
+                                <button class="btn btn-sm btn-primary" onclick="addToCart(7)">
+
+                                    <i class="bi bi-cart-plus"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <img src="./Giftify - Customized Gifts Store_files/photo-1521369909029-2afed882baee" alt="Personalized Cap">
+
+                        <div class="p-3">
+
+                            <small class="text-muted">
+                                Caps
+                            </small>
+
+                            <h5 class="mt-2">
+                                Personalized Cap
+                            </h5>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="price">
+                                    Rs. 899
+                                </span>
+
+                                <button class="btn btn-sm btn-primary" onclick="addToCart(8)">
+
+                                    <i class="bi bi-cart-plus"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </div>
+
+</section>
+
+
+<!-- CUSTOMIZE SECTION -->
+<section class="py-5" id="customize">
+
+    <div class="container">
+
+        <div class="custom-box">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-7">
+
+                    <h2>✨ Create Your Own Customized Gift</h2>
+
+                    <p class="lead">
+                        Add your name, special message or choose your favorite
+                        design and create a unique gift.
+                    </p>
+
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#customModal">
+                        Start Customizing
+                    </button>
+
+                </div>
+
+                <div class="col-lg-5 text-center">
+
+                    <div style="font-size:130px;">
+                        🎁
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CUSTOMIZE MODAL -->
+<div class="modal fade" id="customModal">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Customize Your Gift
+                </h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <div class="row g-4">
+
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            Choose Gift
+                        </label>
+
+                        <select class="form-select" id="customGift" onchange="updateCustomPrice()">
+
+                            <option value="Customized Mug" data-price="799">
+                                Customized Mug - Rs. 799
+                            </option>
+
+                            <option value="Name Pen" data-price="599">
+                                Name Pen - Rs. 599
+                            </option>
+
+                            <option value="Photo Frame" data-price="999">
+                                Photo Frame - Rs. 999
+                            </option>
+
+                            <option value="Custom T-Shirt" data-price="1499">
+                                Custom T-Shirt - Rs. 1,499
+                            </option>
+
+                            <option value="Custom Keychain" data-price="499">
+                                Custom Keychain - Rs. 499
+                            </option>
+
+                        </select>
+
+
+                        <label class="form-label mt-3">
+                            Name / Text
+                        </label>
+
+                        <input type="text" id="customText" class="form-control" placeholder="Enter name or message" oninput="updatePreview()">
+
+
+                        <label class="form-label mt-3">
+                            Choose Color
+                        </label>
+
+                        <input type="color" id="customColor" class="form-control form-control-color" value="#8e44ad" onchange="updatePreview()">
+
+
+                        <label class="form-label mt-3">
+                            Quantity
+                        </label>
+
+                        <input type="number" id="customQty" class="form-control" value="1" min="1">
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            Live Preview
+                        </label>
+
+                        <div class="custom-preview" id="customPreview">
+
+                            Your Name
+
+                        </div>
+
+                        <div class="mt-4">
+
+                            <h5>
+                                Price:
+                                <span class="price" id="customPrice">
+                                    Rs. 799
+                                </span>
+                            </h5>
+
+                            <button class="btn btn-primary w-100 mt-2" onclick="addCustomGift()">
+
+                                <i class="bi bi-cart-plus"></i>
+                                Add Customized Gift
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CART OFFCANVAS -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas">
+
+    <div class="offcanvas-header">
+
+        <h5 class="offcanvas-title">
+            🛒 Shopping Cart
+        </h5>
+
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+        </button>
+
+    </div>
+
+    <div class="offcanvas-body">
+
+        <div id="cartItems">
+                <div class="text-center py-5">
+                    <div style="font-size:60px;">🛒</div>
+                    <h5>Your cart is empty</h5>
+                    <p class="text-muted">
+                        Add some beautiful gifts!
+                    </p>
+                </div>
+            </div>
+
+        <hr>
+
+        <div class="d-flex justify-content-between">
+
+            <h5>Total</h5>
+
+            <h5 class="price" id="cartTotal">Rs. 0</h5>
+
+        </div>
+
+        <button class="btn btn-success w-100 mt-3" onclick="openCheckout()">
+
+            Proceed to Checkout
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- CHECKOUT MODAL -->
+<div class="modal fade" id="checkoutModal">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Checkout
+                </h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <form id="checkoutForm">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Full Name
+                            </label>
+
+                            <input type="text" id="customerName" class="form-control" required="">
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Phone Number
+                            </label>
+
+                            <input type="tel" id="customerPhone" class="form-control" placeholder="03XXXXXXXXX" required="">
+
+                        </div>
+
+                        <div class="col-12">
+
+                            <label class="form-label">
+                                Complete Address
+                            </label>
+
+                            <textarea id="customerAddress" class="form-control" rows="3" required=""></textarea>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                City
+                            </label>
+
+                            <input type="text" id="customerCity" class="form-control" required="">
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Payment Method
+                            </label>
+
+                            <select id="paymentMethod" class="form-select" onchange="showPaymentDetails()" required="">
+
+                                <option value="">
+                                    Select Payment
+                                </option>
+
+                                <option value="JazzCash">
+                                    JazzCash
+                                </option>
+
+                                <option value="Cash on Delivery">
+                                    Cash on Delivery
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- JAZZCASH -->
+                    <div class="jazzcash mt-4" id="jazzDetails" style="display:none;">
+
+                        <div class="jazz-logo">
+                            🟢 JazzCash
+                        </div>
+
+                        <p class="mb-1 mt-2">
+                            Send your payment to:
+                        </p>
+
+                        <h4>
+                            0300 4720066
+                        </h4>
+
+                        <small class="text-muted">
+                            After payment, enter your transaction ID below.
+                        </small>
+
+                        <input type="text" id="transactionId" class="form-control mt-3" placeholder="JazzCash Transaction ID">
+
+                    </div>
+
+
+                    <div class="alert alert-light mt-4">
+
+                        <div class="d-flex justify-content-between">
+
+                            <strong>Order Total</strong>
+
+                            <strong class="price" id="checkoutTotal">
+                                Rs. 0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-success w-100 btn-lg">
+
+                        Place Order
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- SUCCESS MODAL -->
+<div class="modal fade" id="successModal">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content text-center p-4">
+
+            <div style="font-size:70px;">
+                ✅
+            </div>
+
+            <h3>
+                Order Placed!
+            </h3>
+
+            <p id="orderMessage">
+                Thank you for your order.
+            </p>
+
+            <button class="btn btn-primary" data-bs-dismiss="modal">
+                Continue Shopping
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer class="pt-5 pb-3">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <h3>🎁 Giftify</h3>
+
+                <p>
+                    Your online store for customized and personalized gifts.
+                    Make every moment memorable with a unique gift.
+                </p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h5>Quick Links</h5>
+
+                <p>
+                    <a class="footer-link" href="file:///C:/index.html/index.html#home">Home</a>
+                </p>
+
+                <p>
+                    <a class="footer-link" href="file:///C:/index.html/index.html#products">Products</a>
+                </p>
+
+                <p>
+                    <a class="footer-link" href="file:///C:/index.html/index.html#customize">Customize Gift</a>
+                </p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h5>Contact</h5>
+
+                <p>
+                    📱 0300 4720066
+                </p>
+
+                <p>
+                    📧 support@giftify.com
+                </p>
+
+                <p>
+                    📍 Pakistan
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="text-center mb-0">
+            © 2026 Giftify. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- BOOTSTRAP JS -->
+<script src="./Giftify - Customized Gifts Store_files/bootstrap.bundle.min.js.download"></script>
+
+
+<script>
+
+    // PRODUCTS
+    const products = [
+
+        {
+            id: 1,
+            name: "Customized Photo Mug",
+            category: "Mugs",
+            price: 799,
+            image: "https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&w=700&q=80"
+        },
+
+        {
+            id: 2,
+            name: "Personalized Name Pen",
+            category: "Pens",
+            price: 599,
+            image: "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=700&q=80"
+        },
+
+        {
+            id: 3,
+            name: "Customized Photo Frame",
+            category: "Frames",
+            price: 999,
+            image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=700&q=80"
+        },
+
+        {
+            id: 4,
+            name: "Personalized Keychain",
+            category: "Keychains",
+            price: 499,
+            image: "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=700&q=80"
+        },
+
+        {
+            id: 5,
+            name: "Customized T-Shirt",
+            category: "T-Shirts",
+            price: 1499,
+            image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80"
+        },
+
+        {
+            id: 6,
+            name: "Customized Gift Bag",
+            category: "Bags",
+            price: 899,
+            image: "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=700&q=80"
+        },
+
+        {
+            id: 7,
+            name: "Premium Gift Box",
+            category: "Boxes",
+            price: 1999,
+            image: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=700&q=80"
+        },
+
+        {
+            id: 8,
+            name: "Personalized Cap",
+            category: "Caps",
+            price: 899,
+            image: "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=700&q=80"
+        }
+
+    ];
+
+
+    let cart = [];
+
+
+    // DISPLAY PRODUCTS
+    function displayProducts(list = products) {
+
+        const container =
+            document.getElementById("productContainer");
+
+        container.innerHTML = "";
+
+        list.forEach(product => {
+
+            container.innerHTML += `
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <img src="${product.image}"
+                             alt="${product.name}">
+
+                        <div class="p-3">
+
+                            <small class="text-muted">
+                                ${product.category}
+                            </small>
+
+                            <h5 class="mt-2">
+                                ${product.name}
+                            </h5>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <span class="price">
+                                    Rs. ${product.price.toLocaleString()}
+                                </span>
+
+                                <button class="btn btn-sm btn-primary"
+                                        onclick="addToCart(${product.id})">
+
+                                    <i class="bi bi-cart-plus"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        });
+
+    }
+
+
+    displayProducts();
+
+
+    // FILTER
+    function filterProducts(category) {
+
+        document.getElementById("categoryFilter").value =
+            category;
+
+        if (category === "All") {
+
+            displayProducts(products);
+
+        } else {
+
+            const filtered =
+                products.filter(
+                    product => product.category === category
+                );
+
+            displayProducts(filtered);
+
+        }
+
+        document.getElementById("products")
+            .scrollIntoView({ behavior: "smooth" });
+
+    }
+
+
+    // ADD TO CART
+    function addToCart(id) {
+
+        const product =
+            products.find(p => p.id === id);
+
+        cart.push({
+            ...product,
+            quantity: 1
+        });
+
+        updateCart();
+
+    }
+
+
+    // CUSTOM GIFT
+    function addCustomGift() {
+
+        const select =
+            document.getElementById("customGift");
+
+        const productName =
+            select.value;
+
+        const price =
+            parseInt(
+                select.options[select.selectedIndex]
+                    .dataset.price
+            );
+
+        const text =
+            document.getElementById("customText").value;
+
+        const quantity =
+            parseInt(
+                document.getElementById("customQty").value
+            );
+
+
+        cart.push({
+
+            id: Date.now(),
+
+            name: productName +
+                (text ? " - " + text : ""),
+
+            category: "Customized",
+
+            price: price,
+
+            quantity: quantity,
+
+            image:
+                "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=700&q=80"
+
+        });
+
+
+        updateCart();
+
+        bootstrap.Modal
+            .getInstance(
+                document.getElementById("customModal")
+            )
+            .hide();
+
+
+        const cartCanvas =
+            new bootstrap.Offcanvas(
+                document.getElementById("cartCanvas")
+            );
+
+        cartCanvas.show();
+
+    }
+
+
+    // UPDATE CART
+    function updateCart() {
+
+        const container =
+            document.getElementById("cartItems");
+
+        const count =
+            document.getElementById("cartCount");
+
+        const totalElement =
+            document.getElementById("cartTotal");
+
+
+        container.innerHTML = "";
+
+        let total = 0;
+
+        let itemCount = 0;
+
+
+        if (cart.length === 0) {
+
+            container.innerHTML = `
+                <div class="text-center py-5">
+                    <div style="font-size:60px;">🛒</div>
+                    <h5>Your cart is empty</h5>
+                    <p class="text-muted">
+                        Add some beautiful gifts!
+                    </p>
+                </div>
+            `;
+
+        }
+
+
+        cart.forEach((item, index) => {
+
+            const itemTotal =
+                item.price * item.quantity;
+
+            total += itemTotal;
+
+            itemCount += item.quantity;
+
+
+            container.innerHTML += `
+
+                <div class="border rounded p-2 mb-3">
+
+                    <div class="d-flex justify-content-between">
+
+                        <div>
+
+                            <strong>
+                                ${item.name}
+                            </strong>
+
+                            <br>
+
+                            <small>
+                                Rs. ${item.price.toLocaleString()}
+                            </small>
+
+                        </div>
+
+                        <button class="btn btn-sm btn-danger"
+                                onclick="removeCart(${index})">
+
+                            <i class="bi bi-trash"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="d-flex align-items-center mt-2">
+
+                        <button class="btn btn-sm btn-outline-secondary"
+                                onclick="changeQty(${index}, -1)">
+                            -
+                        </button>
+
+                        <span class="mx-3">
+                            ${item.quantity}
+                        </span>
+
+                        <button class="btn btn-sm btn-outline-secondary"
+                                onclick="changeQty(${index}, 1)">
+                            +
+                        </button>
+
+                        <span class="ms-auto fw-bold">
+                            Rs. ${itemTotal.toLocaleString()}
+                        </span>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        });
+
+
+        count.innerText = itemCount;
+
+        totalElement.innerText =
+            "Rs. " + total.toLocaleString();
+
+    }
+
+
+    // REMOVE
+    function removeCart(index) {
+
+        cart.splice(index, 1);
+
+        updateCart();
+
+    }
+
+
+    // CHANGE QUANTITY
+    function changeQty(index, change) {
+
+        cart[index].quantity += change;
+
+        if (cart[index].quantity <= 0) {
+
+            cart.splice(index, 1);
+
+        }
+
+        updateCart();
+
+    }
+
+
+    // GET TOTAL
+    function getCartTotal() {
+
+        return cart.reduce(
+            (sum, item) =>
+                sum + item.price * item.quantity,
+            0
+        );
+
+    }
+
+
+    // CHECKOUT
+    function openCheckout() {
+
+        if (cart.length === 0) {
+
+            alert("Your cart is empty!");
+
+            return;
+
+        }
+
+
+        document.getElementById("checkoutTotal")
+            .innerText =
+            "Rs. " + getCartTotal().toLocaleString();
+
+
+        const cartCanvas =
+            bootstrap.Offcanvas
+                .getInstance(
+                    document.getElementById("cartCanvas")
+                );
+
+        if (cartCanvas) {
+            cartCanvas.hide();
+        }
+
+
+        const checkout =
+            new bootstrap.Modal(
+                document.getElementById("checkoutModal")
+            );
+
+        checkout.show();
+
+    }
+
+
+    // PAYMENT
+    function showPaymentDetails() {
+
+        const method =
+            document.getElementById("paymentMethod").value;
+
+        const jazz =
+            document.getElementById("jazzDetails");
+
+
+        if (method === "JazzCash") {
+
+            jazz.style.display = "block";
+
+        } else {
+
+            jazz.style.display = "none";
+
+        }
+
+    }
+
+
+    // CUSTOM PREVIEW
+    function updatePreview() {
+
+        const text =
+            document.getElementById("customText")
+                .value || "Your Name";
+
+        const color =
+            document.getElementById("customColor")
+                .value;
+
+
+        const preview =
+            document.getElementById("customPreview");
+
+        preview.innerText = text;
+
+        preview.style.color = color;
+
+    }
+
+
+    // CUSTOM PRICE
+    function updateCustomPrice() {
+
+        const select =
+            document.getElementById("customGift");
+
+        const price =
+            select.options[
+                select.selectedIndex
+            ].dataset.price;
+
+
+        document.getElementById("customPrice")
+            .innerText =
+            "Rs. " + Number(price).toLocaleString();
+
+    }
+
+
+    // PLACE ORDER
+    document.getElementById("checkoutForm")
+        .addEventListener("submit", function(e) {
+
+            e.preventDefault();
+
+
+            if (cart.length === 0) {
+
+                alert("Cart is empty!");
+
+                return;
+
+            }
+
+
+            const name =
+                document.getElementById("customerName")
+                    .value;
+
+            const payment =
+                document.getElementById("paymentMethod")
+                    .value;
+
+
+            if (payment === "JazzCash") {
+
+                const transaction =
+                    document.getElementById("transactionId")
+                        .value;
+
+                if (!transaction) {
+
+                    alert(
+                        "Please enter your JazzCash Transaction ID."
+                    );
+
+                    return;
+
+                }
+
+            }
+
+
+            const orderNumber =
+                "GFT-" +
+                Math.floor(
+                    100000 + Math.random() * 900000
+                );
+
+
+            document.getElementById("orderMessage")
+                .innerHTML = `
+
+                    Thank you <strong>${name}</strong>!<br><br>
+
+                    Your order number is
+                    <strong>${orderNumber}</strong>.<br>
+
+                    Total:
+                    <strong>
+                        Rs. ${getCartTotal().toLocaleString()}
+                    </strong>
+
+                `;
+
+
+            bootstrap.Modal
+                .getInstance(
+                    document.getElementById("checkoutModal")
+                )
+                .hide();
+
+
+            const success =
+                new bootstrap.Modal(
+                    document.getElementById("successModal")
+                );
+
+            success.show();
+
+
+            cart = [];
+
+            updateCart();
+
+            document.getElementById("checkoutForm")
+                .reset();
+
+            document.getElementById("jazzDetails")
+                .style.display = "none";
+
+        });
+
+
+    // INITIAL CART
+    updateCart();
+
+</script>
+
+
+</body></html>
